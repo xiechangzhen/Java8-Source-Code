@@ -232,6 +232,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
     /**
      * The default initial capacity - MUST be a power of two.
      */
+    // 缺省值table大小
     static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
 
     /**
@@ -239,11 +240,13 @@ public class HashMap<K,V> extends AbstractMap<K,V>
      * by either of the constructors with arguments.
      * MUST be a power of two <= 1<<30.
      */
+    // tabled 最大长度
     static final int MAXIMUM_CAPACITY = 1 << 30;
 
     /**
      * The load factor used when none specified in constructor.
      */
+    // 缺省值的负载因子
     static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
     /**
@@ -254,6 +257,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
      * tree removal about conversion back to plain bins upon
      * shrinkage.
      */
+    // 树化阀值
     static final int TREEIFY_THRESHOLD = 8;
 
     /**
@@ -261,6 +265,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
      * resize operation. Should be less than TREEIFY_THRESHOLD, and at
      * most 6 to mesh with shrinkage detection under removal.
      */
+    // 树降级为链表的阀值
     static final int UNTREEIFY_THRESHOLD = 6;
 
     /**
